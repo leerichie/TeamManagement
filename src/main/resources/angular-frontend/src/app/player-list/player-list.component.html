@@ -1,0 +1,17 @@
+<h2>Player List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Postion</th>
+            <th>Email ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let player of players">
+            <td> {{player.name}}</td>
+            <td>{{player.position}}</td>
+            <td>{{player.emailId}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.navbar{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: gray;
+}
+.routerLink {
+    color: white;
+}
+.footer {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: absolute;
+    bottom: 0;
+    padding: 3px;
+    background-color: gray;
+    color: white;
+    text-align: center;
+    width: 100%;
+  }

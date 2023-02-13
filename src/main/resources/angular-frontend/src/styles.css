@@ -1,20 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 
-.navbar{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: gray;
+div.background::after {
+  content: "";
+  background: url(assets/YNWA.jpeg) no-repeat;
+  position: fixed;
+  background-size: 100%;
+  top: -40px;
+  left: 50px;
+  width: 900px;
+  height: 900px;
+  z-index: -1;
+  opacity: 0.1;
 }
-.routerLink {
-    color: white;
+
+.navbar {
+  background-color: rgb(219, 33, 33);
 }
+
+.bk-logo {
+  opacity: 1;
+  margin-left: 10px;
+  margin-right: 20px;
+  position: sticky;
+  height: 1cm;
+  width: 0.9cm;
+}
+.col {
+  padding-top: 20px;
+  /* text-align: center; */
+}
+
+.container-btn {
+  text-align: center;
+  margin-top: 5px;
+}
+
 .footer {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    position: absolute;
-    bottom: 0;
-    padding: 3px;
-    background-color: gray;
-    color: white;
-    text-align: center;
-    width: 100%;
-  }
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  position: absolute;
+  bottom: 0;
+  padding: 3px;
+  background-color: rgb(219, 33, 33);
+  color: rgb(247, 245, 245);
+  text-align: center;
+  width: 100%;
+}

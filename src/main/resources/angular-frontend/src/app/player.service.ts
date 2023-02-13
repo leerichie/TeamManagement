@@ -14,4 +14,8 @@ export class PlayerService {
   getPlayersList(): Observable<Player[]> {
     return this.httpClient.get<Player[]>(`${this.baseUrl}`);
   }
+
+  createPlayer(player: Player): Observable<Object>{
+    return this.httpClient.post(`${this.baseUrl}`, player);
+  }
 }

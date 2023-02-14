@@ -2,10 +2,12 @@ package lee.app.teammanagement.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 @Data
 @Entity
 @Table(name = "players")
+@CrossOrigin("*")
 public class Player {
 
     @Id

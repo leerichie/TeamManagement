@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Player } from '../player';
 import { PlayerService } from '../player.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,7 +13,8 @@ export class PlayerListComponent implements OnInit{
 
   players: Player[];
 
-  constructor(private playerService: PlayerService) { }
+  constructor(private playerService: PlayerService,
+    private router: Router) { }
 
   ngOnInit(): void { 
     this.getPlayers();
@@ -22,5 +24,20 @@ export class PlayerListComponent implements OnInit{
     this.playerService.getPlayersList().subscribe(data => {
       this.players = data;
     });
+  }
+
+  playerDetails(id: number){
+    this.router.navigate(['player-details', id])
+  }
+  
+  updatePlayer(id: number){
+    this.router.navigate(['update-player', id])
+  }
+
+  deletePlayer(id: number){
+    this.playerService.deletePlayer(id).subscribe(data =>{
+      console.log(data);
+      this.getPlayers();
+    })
   }
 }

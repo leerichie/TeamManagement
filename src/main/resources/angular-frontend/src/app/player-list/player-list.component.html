@@ -5,14 +5,25 @@
         <tr>
             <th>Name</th>
             <th>Postion</th>
-            <th>Email ID</th>
+            <th>Email</th>
+            <th></th>
+
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let player of players">
+
             <td>{{player.name}}</td>
             <td>{{player.position}}</td>
             <td>{{player.emailId}}</td>
+
+            <td>
+                <Button (click)="updatePlayer(player.id)" class="btn btn-outline-success">Update</Button>
+                <Button (click)="deletePlayer(player.id)" class="btn btn-outline-danger"
+                    style="margin-left: 10px">Delete</Button>
+                <Button (click)="playerDetails(player.id)" class="btn btn-outline-info"
+                    style="margin-left: 10px">Info</Button>
+            </td>
         </tr>
     </tbody>
 </table>

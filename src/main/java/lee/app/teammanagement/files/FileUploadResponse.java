@@ -1,4 +1,4 @@
-package lee.app.teammanagement.upload;
+package lee.app.teammanagement.files;
 
 import lombok.Data;
 

@@ -8,6 +8,7 @@ import { CreateUserComponent } from './create-player/create-player.component';
 import { FormsModule } from '@angular/forms';
 import { UpdatePlayerComponent } from './update-player/update-player.component';
 import { PlayerDetailsComponent } from './player-details/player-details.component';
+import { ImagesComponent } from './images/images.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PlayerDetailsComponent } from './player-details/player-details.componen
     PlayerListComponent,
     CreateUserComponent,
     UpdatePlayerComponent,
-    PlayerDetailsComponent
+    PlayerDetailsComponent,
+    ImagesComponent
   ],
   imports: [
     BrowserModule,

@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./images.component.css'],
 })
 
-export class AppComponent {
+export class ImagesComponent {
   constructor(private httpClient: HttpClient) { }
 
   selectedFile: File;
@@ -33,7 +33,7 @@ export class AppComponent {
     uploadImageData.append('imageFile', this.selectedFile, this.selectedFile.name);
   
     //Make a call to the Spring Boot Application to save the image
-    this.httpClient.post('http://localhost:8080/image/upload', uploadImageData, { observe: 'response' })
+    this.httpClient.post('http://localhost:8282/image/upload', uploadImageData, { observe: 'response' })
       .subscribe((response) => {
         if (response.status === 200) {
           this.message = 'Image uploaded successfully';

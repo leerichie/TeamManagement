@@ -10,6 +10,8 @@ import { UpdatePlayerComponent } from './update-player/update-player.component';
 import { PlayerDetailsComponent } from './player-details/player-details.component';
 import { ImagesComponent } from './images/images.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -2,7 +2,7 @@ import { HttpClient, HttpEventType } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-images',
   templateUrl: './images.component.html',
   styleUrls: ['./images.component.css'],
 })
@@ -46,10 +46,10 @@ export class ImagesComponent {
 
   }
 
-    //Gets called when the user clicks on retieve image button to get the image from back end
+    //Gets called when the user clicks on retrieve image button to get the image from back end
     getImage() {
     //Make a call to Sprinf Boot to get the Image Bytes.
-    this.httpClient.get('http://localhost:8080/image/get/' + this.imageName)
+    this.httpClient.get('http://localhost:8282/image/get/' + this.imageName)
       .subscribe(
         res => {
           this.retrieveResonse = res;
